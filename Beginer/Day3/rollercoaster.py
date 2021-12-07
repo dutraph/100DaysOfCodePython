@@ -15,8 +15,14 @@ if height >= 120:
         ticket_price = 12.0
         print("Adult ticket price $12.0")
     picture = input("Do you want a picture during the trip? [y/n]: ")
+    while True:
+        if picture != "y" and picture != "n":
+            picture = input("Please enter a valid input [y/n]: ")
+        else:
+            break
     if picture == "y":
-        print(f"Total bill ${ticket_price + fee}")
+        ticket_price += fee
+        print(f"Total bill ${ticket_price}")
     else:
         print(f"Total bill ${ticket_price}")
 else:
