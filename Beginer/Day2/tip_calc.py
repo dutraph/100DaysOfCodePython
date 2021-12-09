@@ -6,4 +6,3 @@ people = int(input("How many people to split the bill? "))
 pay_per_person = (bill * (percent / 100) + bill) / people
 
 print(f"Each person should pay: ${pay_per_person:.2f}")
-

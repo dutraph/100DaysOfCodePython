@@ -11,9 +11,11 @@ if height >= 120:
     elif age <= 18:
         ticket_price = 7.0
         print("Youth ticket price $7.0")
-    else:
+    elif age < 45:
         ticket_price = 12.0
         print("Adult ticket price $12.0")
+    elif 45 <= age <= 65:  # simplified version
+        ticket_price = 0.0
     picture = input("Do you want a picture during the trip? [y/n]: ")
     while True:
         if picture != "y" and picture != "n":

@@ -1,20 +1,20 @@
-#Data types
+# Data types
 
-#String
+# String
 str = "Hello"
 print(type(str))
 
 mystery = 734_529.678
 print(type(mystery))
-#Integer
+# Integer
 integer = 123
 print(type(integer))
 
-#Float
+# Float
 flt = 3.1415
 print(type(flt))
 
-#Boolean
+# Boolean
 boole1 = True
 boole2 = False
 print(type(boole1))
