@@ -1,4 +1,3 @@
-import random
 from random import randint
 
 
@@ -36,15 +35,27 @@ def scissors():
 
 
 player = int(input("Enter 1=Rock / 2=Paper / 3=Scissors: "))
-game = [rock(), paper(), scissors()]
-player_hand = game[player - 1]
-cpu = random.choice(game)
+cpu = randint(1,3)
 
-print("You Choose")
-print(player_hand)
+def chosen_hand(pve, name):
+    if pve == 1:
+        print(f"{name} choose rock")
+        rock()
+    elif pve == 2:
+        print(f"{name} choose paper")
+        paper()
+    elif pve == 3:
+        print(f"{name} choose scissors")
+        scissors()
 
-print()
-print()
+chosen_hand(player, "Paulo")
+chosen_hand(cpu, "CPU")
 
-print("CPU Choose")
-print(cpu)
+if player == 1 and cpu == 3:
+    print("You win!")
+elif cpu > player:
+    print("You lose!")
+elif cpu == player:
+    print("It's a draw!")
+else:
+    print("you typed an invalid number, you lose!")
