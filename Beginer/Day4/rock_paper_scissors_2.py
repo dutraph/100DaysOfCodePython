@@ -33,10 +33,6 @@ def scissors():
     ---.__(___)
     """)
 
-
-player = int(input("Enter 1=Rock / 2=Paper / 3=Scissors: "))
-cpu = randint(1,3)
-
 def chosen_hand(pve, name):
     if pve == 1:
         print(f"{name} choose rock")
@@ -48,14 +44,26 @@ def chosen_hand(pve, name):
         print(f"{name} choose scissors")
         scissors()
 
+
+player = int(input("Enter 1=Rock / 2=Paper / 3=Scissors: "))
+cpu = randint(1,3)
+
 chosen_hand(player, "Paulo")
 chosen_hand(cpu, "CPU")
 
-if player == 1 and cpu == 3:
+if player >= 4 and player < 0:
+    print("You typed an invalid number, you lose!")
+elif player == 1 and cpu == 3:
     print("You win!")
+elif cpu == 1 and player == 3:
+    print("You lose!")
 elif cpu > player:
     print("You lose!")
+elif player > cpu:
+    print("You win")
 elif cpu == player:
     print("It's a draw!")
-else:
-    print("you typed an invalid number, you lose!")
+
+
+print(player)
+print(cpu)
