@@ -41,11 +41,15 @@ operations = {
 }
 
 
+def show_operators():
+    for key in operations:
+        print(key)
+
+
 def calculation():
     print(logo())
     number1 = float(input("Enter the 1st number: "))
-    for key in operations:
-        print(key)
+    show_operators()
     sig = input("Enter one of the operator above: ")
     number2 = float(input("Enter the 2nd number: "))
 
@@ -57,7 +61,8 @@ def calculation():
     while not stop:
         cont_calc = input("Like to keep calculating [y/n] or 'r' to restart: ").lower()
         if cont_calc == 'y':
-            sig = input("Enter the operator(+, -, *, /): ")
+            show_operators()
+            sig = input("Enter one of the operator above: ")
             oper = operations[sig]
             new_number = float(input("Enter a new number: "))
             new_result = oper(result, new_number)
