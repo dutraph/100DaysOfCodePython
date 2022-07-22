@@ -33,6 +33,7 @@ def scissors():
     ---.__(___)
     """)
 
+
 def chosen_hand(pve, name):
     if pve == 1:
         print(f"{name} choose rock")
@@ -51,7 +52,7 @@ cpu = randint(1,3)
 chosen_hand(player, "Paulo")
 chosen_hand(cpu, "CPU")
 
-if player >= 4 and player < 0:
+if 4 <= player < 0:
     print("You typed an invalid number, you lose!")
 elif player == 1 and cpu == 3:
     print("You win!")
