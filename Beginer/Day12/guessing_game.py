@@ -4,6 +4,22 @@ EASY_LEVEL = 10
 HARD_LEVEL = 5
 
 
+# class Difficulty:
+#     def __init__(self, difficulty):
+#         self.difficulty = difficulty
+#
+#     @property
+#     def difficulty(self):
+#         return self.difficulty
+#
+#     @difficulty.setter
+#     def difficulty(self, difficulty):
+#         self.difficulty = difficulty
+#
+#     def __int__(self):
+#         return int(self.difficulty)
+#
+
 def set_difficulty():
     difficulty = int(input("Choose a difficulty: 1=Easy / 2=Hard: "))
     if difficulty == 2:
@@ -41,7 +57,6 @@ def game():
     replay = input("Play again? y/n: ")
     if replay == 'y':
         game()
-        set_difficulty(EASY_LEVEL)
 
 
 game()
