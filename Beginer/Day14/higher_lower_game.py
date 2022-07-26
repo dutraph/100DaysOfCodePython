@@ -21,7 +21,9 @@ def right_score_cheering():
 
 def format_output(score, key, key2):
     if score > 0:
-        print(f"{right_score_cheering()} your score: {score}")
+        print(end='\n\n')
+        print(f"        {right_score_cheering()} your score: {score}", end='\n\n')
+        print(end='\n\n')
     print(f"Compare A: {key['name']}, a {key['description']}, from {key['country']}")
     print(vs)
     print(f"Against B: {key2['name']}, a {key2['description']}, from {key2['country']}")
