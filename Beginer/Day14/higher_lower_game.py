@@ -7,7 +7,7 @@ b_turns_a = []
 
 
 def cls():
-    return os.system('cls')
+    return os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def gen_chars():
