@@ -15,4 +15,3 @@ class QuizBrain:
 
     def score_on(self):
         self.score += 1
-
